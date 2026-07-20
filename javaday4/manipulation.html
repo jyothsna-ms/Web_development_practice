@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Example - 1 updating text Content -->
+     <button id="btn">Login</button>
+
+    <p id="mp">welcome guest</p>
+
+    <!-- Example 2 - updating tag itself -->
+    <div id="mydiv">This is Div</div>
+
+    <!-- Example 3 - change the css prop -->
+     <P id="abc">This is old dull paragraph</P>
+
+     <!-- Example 4 - Create elemt /Tag through Js -->
+     <ul id="xyz">
+        <li>Gym</li>
+     </ul>
+    
+    <script>
+        //Update the text content 
+        const button = document.getElementById("btn")
+
+        console.log(button)
+        console.log(button.textContent)
+
+        button.textContent = "Logout"
+
+        const paragraph = document.getElementById("mp")
+        paragraph.textContent = "Good evening Jyothsna"
+
+        //update Tag - innerHTML - which helps us to update Tag also content as well
+
+        const container =  document.getElementById("mydiv")
+        console.log(container)
+
+        // container.innerHTML = "<h2>This is Heading Tag Now</h2>"
+
+        container.innerHTML = `
+        " <p>This is <mark>Updated </mark>Tag </p>
+         <img src="https://images.pexels.com/photos/38593974/pexels-photo-38593974.jpeg" height="100" width="150">
+         <button>Smile</button>
+         `
+
+         const para = document.getElementById("abc")
+
+         //.style.propertyName
+
+         para.style.color = "red"
+         para.style.backgroundColor = "black"
+         para.Style.textAlign="center"
+         para.textContent = "This is New Paragraph Tag"
+
+        const list = document.getElementById("xyz")
+
+        //document.createElement("Tagname")
+        const li = document.createElement("li")
+        li.textContent = "Office"
+        li.style.color = "red"
+
+        //ParentName.appendChild(ChildTagName)
+
+        list.appendChild(li)
+    </script>
+
+    
+</body>
+</html>
